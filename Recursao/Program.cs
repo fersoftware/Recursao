@@ -51,55 +51,58 @@ namespace Recursao
 
         static int ExibeFatorialRecursivo(int n)
         {
-            Console.WriteLine("n =" + n);
+            Console.WriteLine("n =" + n); //Mostra os numeros
 
             if (n == 0)
             {
-                Console.WriteLine();
-                int fat = 1;                
-                return fat;
+                Console.WriteLine(); //Se a posicao for 0 pula linha
+                int fat = 1; // guarda o valor 1 para ser usado depois na multiplicacao
+                return fat; // retorna o valor para ser usado na volta
             }
             else
             {
-                int fat = n * ExibeFatorialRecursivo(n - 1);
-                Console.WriteLine("fat =" + fat);
+                // pega a posicao n e multiplica pelo retorno do metodo
+                int fat = n * ExibeFatorialRecursivo(n - 1); // a cada retorno do metodo ele diminui 1
+                Console.WriteLine("fat =" + fat); // mostra a multiplicacao feita pela variavel fat
                 return fat; // Fatorial de n é n * (n-1)!
             }
         }
 
         static int ExibeSomaRecursivo(int n)
         {
-            Console.WriteLine("n =" + n);
+            Console.WriteLine("n =" + n); //Mostra o valor do metodo
 
             if (n == 0)
             {
-                Console.WriteLine();
+                Console.WriteLine(); //Ao chegar na posicao 0 ele pula a linha
                 int soma = 0;               
-                return soma;
+                return soma; // retorna 0 para ser ser usado depois na soma
             }
             else
             {
-                int soma = n + ExibeSomaRecursivo(n - 1);
-                Console.WriteLine("soma =" + soma);
-                return soma; 
+                int soma = n + ExibeSomaRecursivo(n - 1); //Pega o valor n (que é do proprio metodo) e soma com o metodo - 1
+                Console.WriteLine("soma =" + soma); // mostra a soma
+                return soma; // retorna a soma para ser usado na volta
             }
         }
       
         static int ExibeVetorRecursivo(int[] vetor, int ind)
-        {            
+        {
+            //Mostra os valores guardados no vetor
             Console.WriteLine("valor =" + vetor[ind]);
 
             if (ind == 0)
             {
-                Console.WriteLine();
-                int soma = 1;                
-                return soma;
+                Console.WriteLine(); //Indice 0 pula linha
+                int soma = 1; // é 1 porque 0 dá a soma errada               
+                return soma; // retorna o valor para ser usado na volta
             }
             else
             {
+                // pega o valor do vetor e soma com o valor da posicao anterior (ind - 1)
                 int soma = vetor[ind] + ExibeVetorRecursivo(vetor, ind - 1);
-                Console.WriteLine("soma =" + soma);
-                return soma;
+                Console.WriteLine("soma =" + soma); //Exibe a soma;
+                return soma; // retorna a soma para ser usada na volta
             }
         }
     }
