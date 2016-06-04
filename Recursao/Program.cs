@@ -9,18 +9,19 @@ namespace Recursao
     class Program
     {
         static void Main(string[] args)
-        {
-            int[] n = { 1, 6, 10, 4, 5};
+        {            
+            ExibeNate0REcursivo(8); //Exibe de 0 a 8
+            Console.WriteLine();
+            ExibeNate0(8); //Exibe de 0 a 8;
 
-            ExibeNate0REcursivo(8);
             Console.WriteLine();
-            ExibeNate0(8);
+            Console.WriteLine("valor final =" + ExibeFatorialRecursivo(4)); // 4x3x2x1x0
             Console.WriteLine();
-            Console.WriteLine("valor final =" + ExibeFatorialRecursivo(4));
+            Console.WriteLine("valor final =" + ExibeSomaRecursivo(5)); // de 1 a 5 somando por eles
             Console.WriteLine();
-            Console.WriteLine("valor final =" + ExibeSomaRecursivo(5));
-            Console.WriteLine();
-            Console.WriteLine();
+            
+            int[] n = { 1, 6, 10, 4, 5 }; // numeros do vetor
+            // soma os valores dentro do vetor
             Console.WriteLine("valor final =" +  ExibeVetorRecursivo(n,n.Length-1));
             Console.WriteLine();
             Console.ReadKey();
