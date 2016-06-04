@@ -31,7 +31,7 @@ namespace Recursao
         {
             for (int i = n; i >= 0; i--)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i); //Exibe o loop i
             }            
         }
 
@@ -39,12 +39,13 @@ namespace Recursao
         {
             if (n < 0)
             {
-                return;
+                return; // menor que 0 para;
             }
             else
             {
-                Console.WriteLine(n);
-                ExibeNate0REcursivo(n - 1);
+                Console.WriteLine(n); //mostra o valor de n
+                ExibeNate0REcursivo(n - 1); // chama o metodo tirando 1 sempre
+                // a cada metodo chamado ele diminui 1 até zerar
             }
         }
 
